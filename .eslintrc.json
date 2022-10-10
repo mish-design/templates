@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["prettier", "simple-import-sort", "eslint-plugin-no-cyrillic-string"],
+  "rules": {
+    "prettier/prettier": "warn",
+    "no-cyrillic-string/no-cyrillic-string": "warn",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn"
+  }
 }
