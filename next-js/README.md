@@ -1,8 +1,3 @@
-## Init project
-```bash
-npx create-next-app --example https://github.com/mish/templates/next-js project-name
-```
-
 ## Getting Started
 First, run the development server:
 
