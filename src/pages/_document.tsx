@@ -1,5 +1,5 @@
 // Взято из https://raw.githubusercontent.com/vercel/next.js/canary/examples/with-styled-components/pages/_document.tsx
-// Решает проблему работы styled-components в next.js
+// Решает проблемы styled-components в next.js
 
 import Document, { DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';

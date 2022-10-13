@@ -1,10 +1,9 @@
-import { memo } from 'react';
 import { Box } from 'src/components/common/Box';
 import { Footer } from 'src/components/lib/Footer';
 import { Navbar } from 'src/components/lib/Navbar';
 import styled from 'styled-components';
 
-type CommonLayoutProps = {
+type Props = {
   children: JSX.Element;
 };
 
@@ -12,9 +11,7 @@ const Container = styled(Box)`
   background-color: ${(props) => props.theme.pageBackground};
 `;
 
-export const CommonLayout = memo(function CommonLayoutMemoized({
-  children,
-}: CommonLayoutProps): JSX.Element {
+export const CommonLayout = ({ children }: Props): JSX.Element => {
   const navbarItems = [
     { id: 0, title: 'Home', href: '/' },
     { id: 1, title: 'Todo', href: '/todo' },
@@ -31,4 +28,4 @@ export const CommonLayout = memo(function CommonLayoutMemoized({
       <Footer />
     </Container>
   );
-});
+};

@@ -20,7 +20,9 @@ export const TodoPage = memo(function TodoPageMemoized(): JSX.Element {
         data?.map((item) => (
           <Box key={item.id} gap='12px'>
             <Text>#{item.id}&nbsp;</Text>
+
             <Text>({item.completed ? '+' : '-'})&nbsp;</Text>
+
             <Text>{item.title}</Text>
           </Box>
         ))}
