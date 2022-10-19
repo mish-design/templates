@@ -3,6 +3,8 @@
   "jsxSingleQuote": true,
   "semi": true,
   "bracketSpacing": true,
+  "bracketSameLine": false,
+  "singleAttributePerLine": false,
   "arrowParens": "always",
   "endOfLine": "lf",
   "trailingComma": "all",

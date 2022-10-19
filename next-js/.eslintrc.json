@@ -1,11 +1,56 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["prettier", "simple-import-sort", "eslint-plugin-no-cyrillic-string"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "warnOnUnsupportedTypeScriptVersion": true
+  },
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".d.ts", ".tsx", ".json"]
+      }
+    }
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "plugins": ["prettier", "simple-import-sort", "@typescript-eslint"],
   "rules": {
+    "react/jsx-newline": "warn",
     "prettier/prettier": "warn",
+
     "no-cyrillic-string/no-cyrillic-string": "warn",
+
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn",
-    "react/jsx-newline": "warn"
-  }
+
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+
+    "camelcase": "off",
+
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-misused-promises": "off"
+  },
+
+  "overrides": [
+    {
+      "files": ["src/pages/api/**/*.ts"],
+      "env": {
+        "browser": false,
+        "node": true
+      }
+    }
+  ]
 }
